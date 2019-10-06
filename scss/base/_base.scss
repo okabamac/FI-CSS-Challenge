@@ -1,0 +1,66 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+	box-sizing: inherit;
+}
+
+body {
+	background: color(bg, 5); /* Fallback for when there is no custom background color defined. */
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+}
+main {
+	@include font-family(base);
+	@include font-family(1);
+	@include font-weight(bold);
+}
+.messages {
+    display: grid;
+    max-width: 80vw;
+	margin: 0 auto;
+	grid-gap: 1rem;
+	padding: 0.6em;
+	color: color(typography, 1);
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.messages div {
+	position: relative;
+	max-width: 330px;
+	height: 302px;
+	text-align: center;
+	border-radius: 10px;
+	padding: 0 2.1em;
+
+	button {
+		position: absolute;
+  		left: 0;
+ 		right: 0;
+  		margin-left: auto;
+  		margin-right: auto;
+		bottom: 25px;
+	}
+}
+
+.messages 	.warning {
+		background: linear-gradient(224deg, #FD6266, #FD916A);
+		button {
+			color: #FD6266
+		}
+	}
+.messages 	.update {
+		background: linear-gradient(224deg, #D00269,  #F5515F);
+			button {
+			color: #D00269
+		}
+	}
+.messages 	.success {
+		background: linear-gradient(224deg, #30CC71, #6EECCE);
+		button {
+			color: #30CC71
+		}
+	}

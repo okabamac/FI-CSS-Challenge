@@ -1,0 +1,37 @@
+.button {
+    display: block;
+    @include font-size(8, mobile, true, false, true);
+    @include font-weight(bold);
+    line-height: 14px;
+    margin: 0 auto;
+    outline: none;
+    border: none;
+    border-radius: 22px;
+    cursor: pointer;
+    box-shadow: 0 3.5px 2px -2px gray;
+    justify-content: center;
+    padding: 16px 32px;
+	height: 50px;
+    text-align: center;
+    white-space: nowrap;
+
+	&:hover {
+		background: lighten(color(bg, 3), 1%);
+	}
+
+    &:active {
+        outline: none;
+    }
+
+    &::before {
+        border-radius: 2px;
+    }
+}
+
+// @include media( '<=medium' ) {
+
+// 	.button-wide-mobile {
+// 		width: 100%;
+// 		max-width: 280px;
+// 	}
+// }

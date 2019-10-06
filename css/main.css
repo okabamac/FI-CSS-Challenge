@@ -1,0 +1,121 @@
+/*--------------------------------------------------------------
+# Variables, functions and mixins
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Base
+--------------------------------------------------------------*/
+html {
+  box-sizing: border-box; }
+
+*,
+*:before,
+*:after {
+  /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+  box-sizing: inherit; }
+
+body {
+  background: #fff;
+  /* Fallback for when there is no custom background color defined. */
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased; }
+
+main {
+  font-family: '"Nunito-Bold, Nunito", sans-serif';
+  font-weight: 700; }
+
+.messages {
+  display: grid;
+  max-width: 80vw;
+  margin: 0 auto;
+  grid-gap: 1rem;
+  padding: 0.6em;
+  color: #FFFFFF;
+  grid-template-columns: repeat(3, 1fr); }
+
+.messages div {
+  position: relative;
+  max-width: 330px;
+  height: 302px;
+  text-align: center;
+  border-radius: 10px;
+  padding: 0 2.1em; }
+  .messages div button {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 25px; }
+
+.messages .warning {
+  background: linear-gradient(224deg, #FD6266, #FD916A); }
+  .messages .warning button {
+    color: #FD6266; }
+
+.messages .update {
+  background: linear-gradient(224deg, #D00269, #F5515F); }
+  .messages .update button {
+    color: #D00269; }
+
+.messages .success {
+  background: linear-gradient(224deg, #30CC71, #6EECCE); }
+  .messages .success button {
+    color: #30CC71; }
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+html {
+  font-size: 16px;
+  line-height: 24px; }
+
+body {
+  color: #8A94A7;
+  font-size: 1rem; }
+
+body,
+button {
+  font-family: '"Nunito-Bold, Nunito", sans-serif'; }
+
+h1, h2, h3, h4, h5, h6 {
+  clear: both;
+  color: #FFFFFF;
+  font-weight: 700; }
+
+h3 {
+  font-size: 38pxtrue;
+  line-height: 48px; }
+
+h3 {
+  margin-top: 36px;
+  margin-bottom: 12px; }
+
+button {
+  font-size: 20px;
+  line-height: 30px; }
+
+/*--------------------------------------------------------------
+# Buttons
+--------------------------------------------------------------*/
+.button {
+  display: block;
+  font-size: 14pxtrue;
+  font-weight: 700;
+  line-height: 14px;
+  margin: 0 auto;
+  outline: none;
+  border: none;
+  border-radius: 22px;
+  cursor: pointer;
+  box-shadow: 0 3.5px 2px -2px gray;
+  justify-content: center;
+  padding: 16px 32px;
+  height: 50px;
+  text-align: center;
+  white-space: nowrap; }
+  .button:hover {
+    background: #262a33; }
+  .button:active {
+    outline: none; }
+  .button::before {
+    border-radius: 2px; }
