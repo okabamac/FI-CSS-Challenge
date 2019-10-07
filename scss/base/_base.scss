@@ -17,6 +17,8 @@ main {
 	@include font-family(base);
 	@include font-family(1);
 	@include font-weight(bold);
+	position: relative;
+	top: 2em;
 }
 .messages {
     display: grid;
@@ -25,7 +27,7 @@ main {
 	grid-gap: 1rem;
 	padding: 0.6em;
 	color: color(typography, 1);
-    grid-template-columns: repeat(3, 1fr);
+   	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 
 .messages div {
@@ -42,25 +44,25 @@ main {
  		right: 0;
   		margin-left: auto;
   		margin-right: auto;
-		bottom: 25px;
+		bottom: 2em;
 	}
 }
 
 .messages 	.warning {
-		background: linear-gradient(224deg, #FD6266, #FD916A);
+		background: linear-gradient(constant(gradient, 1), color(primary, 1), color(primary, 2));
 		button {
-			color: #FD6266
+			color: color(primary, 1)
 		}
 	}
 .messages 	.update {
-		background: linear-gradient(224deg, #D00269,  #F5515F);
+		background: linear-gradient(constant(gradient, 1), color(primary, 3),  color(primary, 4));
 			button {
-			color: #D00269
+			color: color(primary, 3)
 		}
 	}
 .messages 	.success {
-		background: linear-gradient(224deg, #30CC71, #6EECCE);
+		background: linear-gradient(constant(gradient, 1), color(primary, 5), color(primary, 6));
 		button {
-			color: #30CC71
+			color: color(primary, 5)
 		}
 	}

@@ -14,14 +14,16 @@ html {
   box-sizing: inherit; }
 
 body {
-  background: #fff;
+  background: #FFFFFF;
   /* Fallback for when there is no custom background color defined. */
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased; }
 
 main {
   font-family: '"Nunito-Bold, Nunito", sans-serif';
-  font-weight: 700; }
+  font-weight: 700;
+  position: relative;
+  top: 2em; }
 
 .messages {
   display: grid;
@@ -30,7 +32,7 @@ main {
   grid-gap: 1rem;
   padding: 0.6em;
   color: #FFFFFF;
-  grid-template-columns: repeat(3, 1fr); }
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
 
 .messages div {
   position: relative;
@@ -45,7 +47,7 @@ main {
     right: 0;
     margin-left: auto;
     margin-right: auto;
-    bottom: 25px; }
+    bottom: 2em; }
 
 .messages .warning {
   background: linear-gradient(224deg, #FD6266, #FD916A); }
@@ -77,18 +79,13 @@ body,
 button {
   font-family: '"Nunito-Bold, Nunito", sans-serif'; }
 
-h1, h2, h3, h4, h5, h6 {
-  clear: both;
-  color: #FFFFFF;
-  font-weight: 700; }
+h3 {
+  font-size: 24px;
+  line-height: 34px; }
 
 h3 {
-  font-size: 38pxtrue;
-  line-height: 48px; }
-
-h3 {
-  margin-top: 36px;
-  margin-bottom: 12px; }
+  margin-top: 45px;
+  margin-bottom: 16px; }
 
 button {
   font-size: 20px;
@@ -107,10 +104,10 @@ button {
   border: none;
   border-radius: 22px;
   cursor: pointer;
-  box-shadow: 0 3.5px 2px -2px gray;
+  box-shadow: 0 3.7px 2px -2px #8A94A7;
   justify-content: center;
-  padding: 16px 32px;
-  height: 50px;
+  padding: 12px 32px;
+  height: 3rem;
   text-align: center;
   white-space: nowrap; }
   .button:hover {

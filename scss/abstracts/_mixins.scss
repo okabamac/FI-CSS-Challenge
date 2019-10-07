@@ -1,6 +1,6 @@
-// Font-size + Line-height + Kerning
+// Font-size + Line-height
 // Usage: @include font-size(1, mobile)
-// Add more true/false args to control what to output: font-size, line-height, kerning
+// Add more true/false args to control what to output: font-size, line-height
 @mixin font-size($size, $elem, $font-size: true, $line-height: false, $adjust-font-size: 0) {
 	@if not map-has-key(map-get($font__scale, $elem), $size) {
 		@warn "'#{$size}' key does not exist in array!";

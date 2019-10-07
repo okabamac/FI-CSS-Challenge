@@ -38,3 +38,10 @@
 @function color($elem, $variant) {
 	@return map-get(map-get($color, $elem), $variant);
 }
+// --------------------------------------------------------------------
+// Retrieve Constants ----------------------------------------------------
+// Usage: constant(gradient, 1) ----------------------------------------------
+// --------------------------------------------------------------------
+@function constant($elem, $variant) {
+	@return map-get(map-get($constant, $elem), $variant);
+}
